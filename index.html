@@ -111,7 +111,7 @@
       function searchByCity() {
         var place = document.getElementById("input").value;
         var urlsearch =
-          `http://api.openweathermap.org/data/2.5/weather?q=${place}&` +
+          `https://api.openweathermap.org/data/2.5/weather?q=${place}&` +
           `appid=${apikey}`;
 
         fetch(urlsearch)
@@ -127,7 +127,7 @@
 
       function weatherReport(data) {
         var urlcast =
-          `http://api.openweathermap.org/data/2.5/forecast?q=${data.name}&` +
+          `https://api.openweathermap.org/data/2.5/forecast?q=${data.name}&` +
           `appid=${apikey}`;
 
         fetch(urlcast)
@@ -154,7 +154,7 @@
 
             let icon1 = data.weather[0].icon;
             let iconurl =
-              "http://api.openweathermap.org/img/w/" + icon1 + ".png";
+              "https://api.openweathermap.org/img/w/" + icon1 + ".png";
             document.getElementById("img").src = iconurl;
           });
       }
